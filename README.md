@@ -220,7 +220,7 @@ npm run dev
 CraftGo was developed as a Software Engineering Graduation Project at **An-Najah National University** by:
 
 - **[Khadija Almasry](https://github.com/khadijaalmasry)**
-- **Maram**
+- **[Maram Salmeyeh](https://github.com/Maram283)**
 
 ---
 
