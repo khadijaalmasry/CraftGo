@@ -1,4 +1,4 @@
-# ✨ CraftGo — AI-Powered Artisan Marketplace & Exhibition Management Platform
+# CraftGo — AI-Powered Artisan Marketplace & Exhibition Management Platform
 
 <div align="center">
 
@@ -15,50 +15,55 @@
 
 ---
 
-## 📌 About CraftGo
+## About CraftGo
 
 **CraftGo** is a cross-platform mobile and web application designed to empower independent artisans and handicraft creators. By bridging traditional craftsmanship with artificial intelligence, CraftGo enables customers to request custom hand-made items, discover local exhibitions, and purchase unique artisanal goods while providing artisans with a robust dashboard to manage products, orders, and event registrations.
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-### 🎨 1. Artisan Workspace & Studio
+### 1. Artisan Workspace & Studio
 - **Product Management:** Catalog creation with image uploads, dynamic pricing, and stock tracking.
 - **Custom Order Requests:** Direct negotiation and custom order status tracking with buyers.
 - **Exhibition Registration:** Apply and book spaces for upcoming craft fairs and exhibitions.
 - **Story Feed:** Post updates, behind-the-scenes craft stories, and build a brand following.
 - **Sales Analytics:** Real-time revenue insights and order state management.
 
-### 🤖 2. Customer AI Craft Generator & Marketplace
-- **AI Custom Craft Order:** State-of-the-art prompt engine powered by **Google Gemini AI** and **Groq ML** that translates customer design ideas into structured custom craft orders and matches them with qualified artisans.
+### 2. Customer AI Craft Generator & Marketplace
+- **AI Custom Craft Order:** Prompt engine powered by **Google Gemini AI** and **Groq ML** that translates customer design ideas into structured custom craft orders and matches them with qualified artisans.
 - **Exhibition Explorer:** Discover nearby craft exhibitions with **Google Maps** integration.
 - **Seamless Checkout:** Secure online payment processing via **Stripe Gateway**.
 - **Real-Time Order Tracking:** Live order updates via WebSockets (**Socket.IO**).
 
-### 🏛️ 3. Exhibition Owner Portal
+### 3. Exhibition Owner Portal
 - **Event Creation:** Organize local and international handicraft exhibitions.
 - **Space & Booth Allocation:** Manage artisan application verification and booth assignments.
 - **Ticket & Event Analytics:** Track participating craftsmen and visitor attendance.
 
-### 🛡️ 4. Platform Admin Management
+### 4. Platform Admin Management
 - **Verification Workflow:** Review artisan identity and exhibition owner credentials.
 - **Dispute Resolution:** Built-in dispute ticket handling system to ensure buyer/seller trust.
 - **Platform Banners:** Publish marketing announcements and featured artisan highlights.
 
 ---
 
-## 🛠️ Architecture & Tech Stack
+## Architecture & Tech Stack
 
 ```mermaid
-graph TD
-    User([Client / User]) -->|Flutter App / Web| Frontend
-    subgraph Frontend Layer
-        Flutter[Flutter Cross-Platform Mobile]
-        ReactWeb[Vite / Web Client]
+flowchart TD
+    User([Client / User]) --> Flutter[Flutter Mobile App]
+    User --> ReactWeb[Vite / Web Client]
+
+    subgraph Frontend [Frontend Layer]
+        Flutter
+        ReactWeb
     end
-    Frontend Layer -->|REST API & Socket.IO| Backend[Node.js + Express API]
-    subgraph Backend Services
+
+    Flutter -->|REST API & WebSockets| Backend[Node.js + Express API]
+    ReactWeb -->|REST API| Backend
+
+    subgraph BackendServices [Backend & Cloud Services]
         Backend --> DB[(SQLite / Sequelize ORM)]
         Backend --> Gemini[Google Gemini AI]
         Backend --> Groq[Groq ML Engine]
@@ -68,12 +73,12 @@ graph TD
     end
 ```
 
-### **Mobile & Web Client**
+### Mobile & Web Client
 - **Framework:** Flutter 3.x (Dart) & Vite/React Web Platform
 - **UI/UX:** Material 3, Google Fonts (`Inter` / `Outfit`), Responsive Layouts
 - **State & Storage:** `shared_preferences`, `socket_io_client`, `http`
 
-### **Backend & APIs**
+### Backend & APIs
 - **Runtime:** Node.js (v18+) with Express.js (v5)
 - **Database & ORM:** SQLite with Sequelize ORM
 - **Real-Time Engine:** Socket.IO
@@ -83,7 +88,7 @@ graph TD
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```
 CraftGo/
@@ -117,7 +122,7 @@ CraftGo/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 Make sure you have the following installed on your development machine:
@@ -127,7 +132,7 @@ Make sure you have the following installed on your development machine:
 
 ---
 
-### 1️⃣ Setting Up the Backend Server
+### 1. Setting Up the Backend Server
 
 ```bash
 # Navigate to the backend directory
@@ -161,7 +166,7 @@ npm run dev
 
 ---
 
-### 2️⃣ Running the Flutter Mobile App
+### 2. Running the Flutter Mobile App
 
 ```bash
 # Navigate to the Flutter app directory
@@ -179,7 +184,7 @@ flutter run
 
 ---
 
-### 3️⃣ Running the Web Client
+### 3. Running the Web Client
 
 ```bash
 # Navigate to the web directory
@@ -195,7 +200,7 @@ npm run dev
 
 ---
 
-## 🔑 Environment Variables Reference
+## Environment Variables Reference
 
 | Variable | Description |
 | :--- | :--- |
@@ -210,28 +215,21 @@ npm run dev
 
 ---
 
-## 👥 Team & Credits
+## Team & Credits
 
-CraftGo was co-developed as a joint software engineering project:
+CraftGo was developed as a Software Engineering Graduation Project at **An-Najah National University** by:
 
-- 👩‍💻 **[Khadija Almasry](https://github.com/khadijaalmasry)** — **Lead Developer**
-  - Mobile App Architecture (Flutter/Dart) & UI/UX Design System
-  - AI Custom Craft Order Integration (Google Gemini & Groq ML)
-  - Stripe Payment Gateway & Socket.IO Real-Time Engine
-  - Backend REST API Endpoints & Sequelize Database Schema
-
-- 👩‍💻 **Maram** — **Co-Developer**
-  - Frontend Component Collaboration & Admin Portal Workflows
-  - Exhibition Owner Management Integration
+- **[Khadija Almasry](https://github.com/khadijaalmasry)**
+- **Maram**
 
 ---
 
-## 📜 License
+## License
 
 Distributed under the MIT License. See `LICENSE` for more details.
 
 ---
 
 <div align="center">
-  <sub>Built with ❤️ by Khadija Almasry & Team</sub>
+  <sub>An-Najah National University — Software Engineering Graduation Project</sub>
 </div>
