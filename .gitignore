@@ -1,0 +1,88 @@
+# ==========================================
+# CraftGo Root Git Ignore File
+# ==========================================
+
+# Environment variables & Sensitive Data
+.env
+.env.*
+*.env
+!.env.example
+
+# Databases & Runtime State
+*.sqlite
+*.sqlite3
+*.db
+*.sqlite-journal
+craftgo.sqlite
+craftgo_backend/craftgo.sqlite
+database.sqlite
+
+# Backend Uploads & Generated Storage
+craftgo_backend/uploads/*
+!craftgo_backend/uploads/.gitkeep
+
+# Node.js & Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build Outputs & Web Distributables
+dist/
+build/
+out/
+.next/
+
+# Flutter & Dart Build Artifacts
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+*.apk
+*.aab
+*.ipa
+
+# Android Specific
+craftgo/android/.gradle/
+craftgo/android/local.properties
+craftgo/android/app/debug/
+craftgo/android/app/profile/
+craftgo/android/app/release/
+
+# iOS & macOS Specific
+craftgo/ios/Pods/
+craftgo/ios/.symlinks/
+craftgo/ios/Flutter/App.framework
+craftgo/ios/Flutter/Flutter.framework
+craftgo/ios/Flutter/Flutter.podspec
+craftgo/ios/Flutter/Generated.xcconfig
+craftgo/ios/Flutter/app.flx
+craftgo/ios/Flutter/app.zip
+craftgo/ios/Flutter/flutter_assets/
+craftgo/ios/ServiceDefinitions
+craftgo/ios/Runner.xcodeproj/project.xcworkspace/xcuserdata/
+craftgo/ios/Runner.xcodeproj/xcuserdata/
+
+# IDE & Editor Configuration
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs & Temporary Analysis Output
+*.log
+flutter_crash.log
+analyze*.txt
